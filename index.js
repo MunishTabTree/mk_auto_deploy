@@ -5,6 +5,10 @@ app.get('/', (req, res) =>{
     res.send("hello munish & pbk & sabari")
 })
 
+app.get('/:name', (req, res) =>{
+    res.send(`select dynamic route is ${req.params.name}`)
+})
+
 app.listen(5000, ()=>{
     console.log("app running on port :", 5000)
 })
